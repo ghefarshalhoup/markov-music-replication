@@ -1,0 +1,191 @@
+{
+ "strengths": {
+  "length": 3.9938334639746245,
+  "pitch": 2.9373709932779093,
+  "level": 0.02787242263555527
+ },
+ "reference": {
+  "baseline": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.176,
+    "ends on a long note": 0.072,
+    "strong beats minus offbeats": -0.16864972420600086
+   },
+   "per piece": {
+    "notes": 47.958,
+    "pitch range": 22.97,
+    "distinct pitches": 12.164,
+    "mean step size": 2.3769175883534306,
+    "silent sixteenths": 5.214,
+    "loudness range": 23.658,
+    "mean loudness step": 4.878487931966786
+   },
+   "steps of 2 semitones or less": 0.6683419225691043,
+   "unique pieces": 1.0
+  },
+  "with the leash (main version)": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.83,
+    "ends on a long note": 0.78,
+    "strong beats minus offbeats": 3.017262874343202
+   },
+   "per piece": {
+    "notes": 45.55,
+    "pitch range": 22.386,
+    "distinct pitches": 11.75,
+    "mean step size": 2.380647295067517,
+    "silent sixteenths": 4.788,
+    "loudness range": 23.77,
+    "mean loudness step": 5.039858223200928
+   },
+   "steps of 2 semitones or less": 0.6703479236812571,
+   "unique pieces": 1.0
+  }
+ },
+ "without the leash, by practice pieces": {
+  "0": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.214,
+    "ends on a long note": 0.03,
+    "strong beats minus offbeats": -0.254885907536462
+   },
+   "per piece": {
+    "notes": 55.494,
+    "pitch range": 23.67,
+    "distinct pitches": 12.756,
+    "mean step size": 2.3804609186115564,
+    "silent sixteenths": 4.652,
+    "loudness range": 23.882,
+    "mean loudness step": 4.925558181657365
+   },
+   "steps of 2 semitones or less": 0.6707160421330789,
+   "unique pieces": 1.0,
+   "seconds": 18.7
+  },
+  "1000": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.876,
+    "ends on a long note": 0.822,
+    "strong beats minus offbeats": 4.902694201212345
+   },
+   "per piece": {
+    "notes": 31.442,
+    "pitch range": 23.082,
+    "distinct pitches": 11.67,
+    "mean step size": 3.5403699908113007,
+    "silent sixteenths": 15.054,
+    "loudness range": 23.522,
+    "mean loudness step": 5.856041158782534
+   },
+   "steps of 2 semitones or less": 0.4667236055449708,
+   "unique pieces": 1.0,
+   "seconds": 19.9
+  },
+  "3000": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.842,
+    "ends on a long note": 0.814,
+    "strong beats minus offbeats": 7.074862111756844
+   },
+   "per piece": {
+    "notes": 21.416,
+    "pitch range": 20.13,
+    "distinct pitches": 9.64,
+    "mean step size": 3.379830825621894,
+    "silent sixteenths": 16.676,
+    "loudness range": 23.082,
+    "mean loudness step": 6.542111580738371
+   },
+   "steps of 2 semitones or less": 0.4906935736677116,
+   "unique pieces": 1.0,
+   "seconds": 21.4
+  },
+  "10000": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.8,
+    "ends on a long note": 0.794,
+    "strong beats minus offbeats": 6.7104207036739005
+   },
+   "per piece": {
+    "notes": 27.712,
+    "pitch range": 23.348,
+    "distinct pitches": 11.542,
+    "mean step size": 3.66331673969414,
+    "silent sixteenths": 20.748,
+    "loudness range": 23.722,
+    "mean loudness step": 6.500133454099657
+   },
+   "steps of 2 semitones or less": 0.44519317160826594,
+   "unique pieces": 1.0,
+   "seconds": 25.9
+  },
+  "30000": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.784,
+    "ends on a long note": 0.842,
+    "strong beats minus offbeats": 7.033456337332286
+   },
+   "per piece": {
+    "notes": 31.772,
+    "pitch range": 25.684,
+    "distinct pitches": 12.936,
+    "mean step size": 3.8969480135789807,
+    "silent sixteenths": 20.018,
+    "loudness range": 24,
+    "mean loudness step": 6.57128484976075
+   },
+   "steps of 2 semitones or less": 0.41349278564929154,
+   "unique pieces": 1.0,
+   "seconds": 42.3
+  },
+  "100000": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.78,
+    "ends on a long note": 0.842,
+    "strong beats minus offbeats": 7.0892597253532985
+   },
+   "per piece": {
+    "notes": 31.528,
+    "pitch range": 27.536,
+    "distinct pitches": 13.856,
+    "mean step size": 4.253923511561389,
+    "silent sixteenths": 22.668,
+    "loudness range": 23.816,
+    "mean loudness step": 6.474425422745335
+   },
+   "steps of 2 semitones or less": 0.3831892033542977,
+   "unique pieces": 1.0,
+   "seconds": 102.9
+  },
+  "300000": {
+   "finished": 1.0,
+   "rules": {
+    "ends on C": 0.746,
+    "ends on a long note": 0.828,
+    "strong beats minus offbeats": 6.492215550978691
+   },
+   "per piece": {
+    "notes": 29.41,
+    "pitch range": 28.348,
+    "distinct pitches": 14.168,
+    "mean step size": 4.564201319854675,
+    "silent sixteenths": 24.32,
+    "loudness range": 23.798,
+    "mean loudness step": 6.606660809545586
+   },
+   "steps of 2 semitones or less": 0.3519183386131644,
+   "unique pieces": 1.0,
+   "seconds": 269.3
+  }
+ },
+ "practice pieces where the rhythm got stuck": 0,
+ "seconds": 269.3
+}

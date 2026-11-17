@@ -1,0 +1,22 @@
+{
+ "baseline run (200 pieces, one stream): identical": 200,
+ "of": 200,
+ "extra pieces (one seed each): identical": 1000,
+ "of extra": 1000,
+ "rhythm policies checked": 1679,
+ "rhythm: largest probability difference": 0.0,
+ "pitch policies checked": 2642,
+ "pitch: largest probability difference": 0.0,
+ "values with no continuation in training (dead ends)": {
+  "length": 0,
+  "pitch": 0,
+  "level": 0
+ },
+ "states worked out": {
+  "rhythm": 1703,
+  "pitch": 2679,
+  "loudness": 3327
+ },
+ "note starts seen in rhythm pieces": 128,
+ "seconds": 20.8
+}

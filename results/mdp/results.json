@@ -1,0 +1,1615 @@
+{
+ "strengths": {
+  "length": 3.9938334639746245,
+  "pitch": 2.9373709932779093,
+  "level": 0.02787242263555527
+ },
+ "practice pieces used (main)": {
+  "rhythm": 30000,
+  "pitch": 10000,
+  "loudness": 10000
+ },
+ "no-leash practice pieces": 30000,
+ "attempts": 200,
+ "reference": {
+  "tv": {
+   "pitch": {
+    "mean": 0.1759093820311177,
+    "p5": 0.11220342123016558,
+    "p95": 0.2631046787632342
+   },
+   "pitch class": {
+    "mean": 0.07620132598721585,
+    "p5": 0.04320063337468197,
+    "p95": 0.10752896753888383
+   },
+   "pitch step": {
+    "mean": 0.10226350387659451,
+    "p5": 0.0648567722935863,
+    "p95": 0.15155538420009282
+   },
+   "length": {
+    "mean": 0.13344890234724002,
+    "p5": 0.059537742764646365,
+    "p95": 0.24698727854886857
+   },
+   "length pair": {
+    "mean": 0.2467497200894396,
+    "p5": 0.1720193863918799,
+    "p95": 0.3694446839499456
+   },
+   "loudness": {
+    "mean": 0.20457117835282446,
+    "p5": 0.1539225258738479,
+    "p95": 0.25285408600789
+   },
+   "loudness step": {
+    "mean": 0.12869977448033865,
+    "p5": 0.09760383018259174,
+    "p95": 0.16154010470181945
+   }
+  },
+  "entropy": {
+   "pitch": 3.9814811956764413,
+   "pitch class": 2.767365487255721,
+   "pitch step": 3.4349718775462983,
+   "length": 2.431100897828058,
+   "length pair": 4.58144031604638,
+   "loudness": 4.392370943504722,
+   "loudness step": 4.768778220757052
+  },
+  "features_test": {
+   "notes": {
+    "mean": 40.08108108108108,
+    "ks": 0.0
+   },
+   "distinct pitches": {
+    "mean": 8.472972972972974,
+    "ks": 0.0
+   },
+   "pitch range": {
+    "mean": 13.472972972972974,
+    "ks": 0.0
+   },
+   "mean step size": {
+    "mean": 2.382972018078961,
+    "ks": 0.0
+   },
+   "rests": {
+    "mean": 1.2972972972972974,
+    "ks": 0.0
+   },
+   "silent sixteenths": {
+    "mean": 20.83783783783784,
+    "ks": 0.0
+   },
+   "loudness range": {
+    "mean": 20.216216216216218,
+    "ks": 0.0
+   },
+   "mean loudness step": {
+    "mean": 5.503504736744897,
+    "ks": 0.0
+   }
+  },
+  "features_train": {
+   "notes": {
+    "mean": 37.43051359516616,
+    "ks": 0.13366538744182255
+   },
+   "distinct pitches": {
+    "mean": 7.40785498489426,
+    "ks": 0.3334285947578999
+   },
+   "pitch range": {
+    "mean": 13.243202416918429,
+    "ks": 0.10884298195476443
+   },
+   "mean step size": {
+    "mean": 2.3859376999294146,
+    "ks": 0.17261370131460765
+   },
+   "rests": {
+    "mean": 1.0649546827794563,
+    "ks": 0.15064913856454637
+   },
+   "silent sixteenths": {
+    "mean": 22.17522658610272,
+    "ks": 0.16432595737731692
+   },
+   "loudness range": {
+    "mean": 17.512084592145015,
+    "ks": 0.2708010124928554
+   },
+   "mean loudness step": {
+    "mean": 4.7483868116611365,
+    "ks": 0.1860455621784927
+   }
+  },
+  "rests_test": 8.513513513513514,
+  "rests_train": 6.906344410876133,
+  "copying": {
+   "melody": {
+    "longest_run": 4.216216216216216,
+    "longest_share": 0.12297518406984734,
+    "gram_overlap": 0.11130781883660806,
+    "full_copy": 0
+   },
+   "pitch step": {
+    "longest_run": 7.027027027027027,
+    "longest_share": 0.20831521055230084,
+    "gram_overlap": 0.7095979535547363,
+    "full_copy": 0
+   },
+   "length": {
+    "longest_run": 11.72972972972973,
+    "longest_share": 0.30292315313203333,
+    "gram_overlap": 0.8518064315209658,
+    "full_copy": 0
+   },
+   "loudness": {
+    "longest_run": 5.094594594594595,
+    "longest_share": 0.14271069015927593,
+    "gram_overlap": 0.25780811458445024,
+    "full_copy": 0
+   }
+  },
+  "diversity": {
+   "unique_pieces": 0.972972972972973,
+   "unique_melodies": 0.9459459459459459,
+   "pair_overlap melody": 0.01940362685847777,
+   "pair_overlap pitch step": 0.0380610356633438,
+   "pair_overlap length": 0.08833177599562038,
+   "pair_overlap loudness": 0.01997217141697446
+  },
+  "n_test_windows": 74
+ },
+ "runs": {
+  "baseline": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.185,
+    "ends on a long note": 0.045,
+    "strong beats minus offbeats": -0.26097993958480165
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.1085467325295457,
+     "p5": 0.09563470874441932,
+     "p95": 0.12393612499689181
+    },
+    "pitch class": {
+     "mean": 0.0595126772778217,
+     "p5": 0.05088059242569667,
+     "p95": 0.06792775321511367
+    },
+    "pitch step": {
+     "mean": 0.0741669479659886,
+     "p5": 0.06706912235167635,
+     "p95": 0.08186599896691052
+    },
+    "length": {
+     "mean": 0.1295402182990824,
+     "p5": 0.11299415559642578,
+     "p95": 0.1422247596297494
+    },
+    "length pair": {
+     "mean": 0.21868445694976885,
+     "p5": 0.2056054998028942,
+     "p95": 0.23104644483212206
+    },
+    "loudness": {
+     "mean": 0.1624757028106168,
+     "p5": 0.1528568854850738,
+     "p95": 0.1713909836002564
+    },
+    "loudness step": {
+     "mean": 0.09004312000668328,
+     "p5": 0.08303320241543174,
+     "p95": 0.09646764319368503
+    }
+   },
+   "entropy": {
+    "pitch": 3.9201238176146793,
+    "pitch class": 2.651078615092133,
+    "pitch step": 3.3696953567290335,
+    "length": 2.1034332946795393,
+    "length pair": 3.8808694071662155,
+    "loudness": 4.426299566651849,
+    "loudness step": 4.719247121241601
+   },
+   "features": {
+    "notes": {
+     "mean": 48.345,
+     "ks": 0.44202702702702695
+    },
+    "distinct pitches": {
+     "mean": 12.015,
+     "ks": 0.7644594594594594
+    },
+    "pitch range": {
+     "mean": 22.61,
+     "ks": 0.832972972972973
+    },
+    "mean step size": {
+     "mean": 2.3737487599501144,
+     "ks": 0.09378378378378383
+    },
+    "rests": {
+     "mean": 0.925,
+     "ks": 0.17256756756756753
+    },
+    "silent sixteenths": {
+     "mean": 5.78,
+     "ks": 0.32837837837837835
+    },
+    "loudness range": {
+     "mean": 23.59,
+     "ks": 0.48459459459459464
+    },
+    "mean loudness step": {
+     "mean": 5.0229954922400255,
+     "ks": 0.370945945945946
+    }
+   },
+   "rests between notes": 5.78,
+   "copying": {
+    "melody": {
+     "longest_run": 4.39,
+     "longest_share": 0.0927294798042014,
+     "gram_overlap": 0.09894792803448357,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.14,
+     "longest_share": 0.1510061825529276,
+     "gram_overlap": 0.6876529021555206,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 12.63,
+     "longest_share": 0.2559099746802888,
+     "gram_overlap": 0.9380859651202094,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.91,
+     "longest_share": 0.10187023701513188,
+     "gram_overlap": 0.2038673304936826,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0007671059739438353,
+    "pair_overlap pitch step": 0.015110002528717947,
+    "pair_overlap length": 0.15843606487207462,
+    "pair_overlap loudness": 0.0012516101658971387
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 0.0,
+     "pitch": 0.0,
+     "loudness": 0.0
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 4.3
+  },
+  "MDP main (practised)": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.815,
+    "ends on a long note": 0.76,
+    "strong beats minus offbeats": 2.952203178636685
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.11440894501471081,
+     "p5": 0.09946180616536579,
+     "p95": 0.13218388643247656
+    },
+    "pitch class": {
+     "mean": 0.062364130939194705,
+     "p5": 0.0569266623637857,
+     "p95": 0.06941899995777161
+    },
+    "pitch step": {
+     "mean": 0.0916264051853948,
+     "p5": 0.08646358105383278,
+     "p95": 0.0997660793362192
+    },
+    "length": {
+     "mean": 0.06497200238679647,
+     "p5": 0.05371541581610126,
+     "p95": 0.07853528690617884
+    },
+    "length pair": {
+     "mean": 0.18498134312476935,
+     "p5": 0.17602454310883398,
+     "p95": 0.19473006121430173
+    },
+    "loudness": {
+     "mean": 0.1497844092745115,
+     "p5": 0.141434455418447,
+     "p95": 0.15861114658223904
+    },
+    "loudness step": {
+     "mean": 0.09294948228855099,
+     "p5": 0.08701182521595625,
+     "p95": 0.09957607738074022
+    }
+   },
+   "entropy": {
+    "pitch": 3.814740728288424,
+    "pitch class": 2.5977218891999376,
+    "pitch step": 3.2758185427398248,
+    "length": 2.23535828920294,
+    "length pair": 4.0536092119833445,
+    "loudness": 4.444622291518338,
+    "loudness step": 4.701616502030552
+   },
+   "features": {
+    "notes": {
+     "mean": 47.97,
+     "ks": 0.407027027027027
+    },
+    "distinct pitches": {
+     "mean": 11.765,
+     "ks": 0.6694594594594594
+    },
+    "pitch range": {
+     "mean": 22.03,
+     "ks": 0.742972972972973
+    },
+    "mean step size": {
+     "mean": 2.3124275329851782,
+     "ks": 0.14243243243243242
+    },
+    "rests": {
+     "mean": 0.95,
+     "ks": 0.21256756756756756
+    },
+    "silent sixteenths": {
+     "mean": 5.405,
+     "ks": 0.37540540540540535
+    },
+    "loudness range": {
+     "mean": 23.875,
+     "ks": 0.5045945945945947
+    },
+    "mean loudness step": {
+     "mean": 4.942746999329467,
+     "ks": 0.365945945945946
+    }
+   },
+   "rests between notes": 5.405,
+   "copying": {
+    "melody": {
+     "longest_run": 4.42,
+     "longest_share": 0.09605606356010633,
+     "gram_overlap": 0.10548608430201796,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.22,
+     "longest_share": 0.15672044917368677,
+     "gram_overlap": 0.7000081241652096,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 12.09,
+     "longest_share": 0.24967140382474734,
+     "gram_overlap": 0.9192791283638643,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.83,
+     "longest_share": 0.10192373448707409,
+     "gram_overlap": 0.19106154922358332,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0003823407177176454,
+    "pair_overlap pitch step": 0.019018698148757975,
+    "pair_overlap length": 0.14538902655960625,
+    "pair_overlap loudness": 0.0010624208796953096
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 2.6518349006313646,
+     "pitch": 1.4055220173634557,
+     "loudness": 1.4923392985113284
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 2.3
+  },
+  "MDP main (exact)": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.835,
+    "ends on a long note": 0.795,
+    "strong beats minus offbeats": 3.4977761475757294
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.11590786760503494,
+     "p5": 0.0999263110248452,
+     "p95": 0.13201206021873318
+    },
+    "pitch class": {
+     "mean": 0.05823154900016438,
+     "p5": 0.05330997671438643,
+     "p95": 0.06371271000828554
+    },
+    "pitch step": {
+     "mean": 0.07577783564527463,
+     "p5": 0.06970313705057077,
+     "p95": 0.08297677272429618
+    },
+    "length": {
+     "mean": 0.13068516980159037,
+     "p5": 0.1151728291330814,
+     "p95": 0.1454494862042891
+    },
+    "length pair": {
+     "mean": 0.2258290866404983,
+     "p5": 0.21091235674356404,
+     "p95": 0.24161025941225764
+    },
+    "loudness": {
+     "mean": 0.17388620743222477,
+     "p5": 0.1666494101583243,
+     "p95": 0.1837713049097664
+    },
+    "loudness step": {
+     "mean": 0.08911272964760761,
+     "p5": 0.08329188580846551,
+     "p95": 0.09520174841489892
+    }
+   },
+   "entropy": {
+    "pitch": 3.8803056420575412,
+    "pitch class": 2.6156082576112447,
+    "pitch step": 3.367074354461092,
+    "length": 2.151618522521963,
+    "length pair": 3.895674645468439,
+    "loudness": 4.466256783134804,
+    "loudness step": 4.733406680945325
+   },
+   "features": {
+    "notes": {
+     "mean": 46.075,
+     "ks": 0.365
+    },
+    "distinct pitches": {
+     "mean": 11.505,
+     "ks": 0.6494594594594594
+    },
+    "pitch range": {
+     "mean": 21.755,
+     "ks": 0.7363513513513513
+    },
+    "mean step size": {
+     "mean": 2.388062920003383,
+     "ks": 0.12378378378378374
+    },
+    "rests": {
+     "mean": 0.85,
+     "ks": 0.17756756756756753
+    },
+    "silent sixteenths": {
+     "mean": 5.175,
+     "ks": 0.37891891891891893
+    },
+    "loudness range": {
+     "mean": 23.67,
+     "ks": 0.49959459459459465
+    },
+    "mean loudness step": {
+     "mean": 5.0732422115402045,
+     "ks": 0.3483783783783784
+    }
+   },
+   "rests between notes": 5.175,
+   "copying": {
+    "melody": {
+     "longest_run": 4.41,
+     "longest_share": 0.10013191150926636,
+     "gram_overlap": 0.1031018492667692,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.14,
+     "longest_share": 0.16191825694289325,
+     "gram_overlap": 0.6948408743535037,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 12.66,
+     "longest_share": 0.27372971626102194,
+     "gram_overlap": 0.9300854521899279,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.85,
+     "longest_share": 0.10751407343385858,
+     "gram_overlap": 0.18578897724012428,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0006795985375178588,
+    "pair_overlap pitch step": 0.015017989408741574,
+    "pair_overlap length": 0.15016069539015345,
+    "pair_overlap loudness": 0.0009124316279312152
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 2.502220341259005,
+     "pitch": 1.2771049090140354,
+     "loudness": 1.63792852910351
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 3.9
+  },
+  "MDP 0.5x": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.545,
+    "ends on a long note": 0.38,
+    "strong beats minus offbeats": 1.3256470465499077
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.11836967843554946,
+     "p5": 0.10696915753699755,
+     "p95": 0.13340586352977704
+    },
+    "pitch class": {
+     "mean": 0.05538268348132574,
+     "p5": 0.04920948913110744,
+     "p95": 0.06294585690731389
+    },
+    "pitch step": {
+     "mean": 0.08251883204405375,
+     "p5": 0.07306482174352659,
+     "p95": 0.09063034930709259
+    },
+    "length": {
+     "mean": 0.13719538721509913,
+     "p5": 0.12193751646113964,
+     "p95": 0.15189197796454448
+    },
+    "length pair": {
+     "mean": 0.2346571868697857,
+     "p5": 0.22245968783253853,
+     "p95": 0.24923569455446787
+    },
+    "loudness": {
+     "mean": 0.15173905336700247,
+     "p5": 0.14016841447205558,
+     "p95": 0.16238624151769668
+    },
+    "loudness step": {
+     "mean": 0.10667934867162296,
+     "p5": 0.09937597538295588,
+     "p95": 0.11378653569548643
+    }
+   },
+   "entropy": {
+    "pitch": 3.9149748444379613,
+    "pitch class": 2.6468456512719687,
+    "pitch step": 3.3519930106643203,
+    "length": 2.116402851176796,
+    "length pair": 3.860302813914232,
+    "loudness": 4.426571998748942,
+    "loudness step": 4.716930187980037
+   },
+   "features": {
+    "notes": {
+     "mean": 46.915,
+     "ks": 0.37094594594594593
+    },
+    "distinct pitches": {
+     "mean": 11.835,
+     "ks": 0.6844594594594594
+    },
+    "pitch range": {
+     "mean": 22.35,
+     "ks": 0.7829729729729731
+    },
+    "mean step size": {
+     "mean": 2.386624648330567,
+     "ks": 0.12378378378378374
+    },
+    "rests": {
+     "mean": 0.95,
+     "ks": 0.20756756756756756
+    },
+    "silent sixteenths": {
+     "mean": 5.57,
+     "ks": 0.3639189189189189
+    },
+    "loudness range": {
+     "mean": 23.685,
+     "ks": 0.5045945945945947
+    },
+    "mean loudness step": {
+     "mean": 5.006800195998447,
+     "ks": 0.35094594594594597
+    }
+   },
+   "rests between notes": 5.57,
+   "copying": {
+    "melody": {
+     "longest_run": 4.41,
+     "longest_share": 0.09901120489379597,
+     "gram_overlap": 0.1033582337988353,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.13,
+     "longest_share": 0.16071261007659854,
+     "gram_overlap": 0.6906048351411341,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 12.91,
+     "longest_share": 0.27536911715031587,
+     "gram_overlap": 0.9363983516315882,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.91,
+     "longest_share": 0.10839811653184878,
+     "gram_overlap": 0.20764268984242404,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0007676512049216096,
+    "pair_overlap pitch step": 0.015179471084647348,
+    "pair_overlap length": 0.1671488445053011,
+    "pair_overlap loudness": 0.0008194828988713571
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 0.4748926172948139,
+     "pitch": 0.3689179890209648,
+     "loudness": 0.3634720856589378
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 4.2
+  },
+  "MDP 2x": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.995,
+    "ends on a long note": 1.0,
+    "strong beats minus offbeats": 8.049594030273122
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.11484391656932762,
+     "p5": 0.09483495213164828,
+     "p95": 0.13585152206995446
+    },
+    "pitch class": {
+     "mean": 0.05512543071236151,
+     "p5": 0.049820062112005646,
+     "p95": 0.06081421877269938
+    },
+    "pitch step": {
+     "mean": 0.07742125955745316,
+     "p5": 0.06914417667162065,
+     "p95": 0.08739206849262245
+    },
+    "length": {
+     "mean": 0.1574085679058686,
+     "p5": 0.14434002217418332,
+     "p95": 0.17452014942402158
+    },
+    "length pair": {
+     "mean": 0.25187142237949167,
+     "p5": 0.2365176853031781,
+     "p95": 0.269841119273814
+    },
+    "loudness": {
+     "mean": 0.2357836787387688,
+     "p5": 0.22509825762713,
+     "p95": 0.2447351256713488
+    },
+    "loudness step": {
+     "mean": 0.0967274232242242,
+     "p5": 0.08813724238987036,
+     "p95": 0.10685195950549392
+    }
+   },
+   "entropy": {
+    "pitch": 3.9181162400772815,
+    "pitch class": 2.6255049092278604,
+    "pitch step": 3.369646158423057,
+    "length": 2.186082773284374,
+    "length pair": 3.952863876545009,
+    "loudness": 4.404593408070685,
+    "loudness step": 4.812367656871055
+   },
+   "features": {
+    "notes": {
+     "mean": 44.09,
+     "ks": 0.3233783783783784
+    },
+    "distinct pitches": {
+     "mean": 11.555,
+     "ks": 0.6194594594594593
+    },
+    "pitch range": {
+     "mean": 21.835,
+     "ks": 0.7163513513513513
+    },
+    "mean step size": {
+     "mean": 2.38118031320075,
+     "ks": 0.11878378378378374
+    },
+    "rests": {
+     "mean": 0.925,
+     "ks": 0.22756756756756752
+    },
+    "silent sixteenths": {
+     "mean": 5.205,
+     "ks": 0.38391891891891894
+    },
+    "loudness range": {
+     "mean": 24.255,
+     "ks": 0.5647297297297297
+    },
+    "mean loudness step": {
+     "mean": 5.611312687755744,
+     "ks": 0.3254054054054054
+    }
+   },
+   "rests between notes": 5.205,
+   "copying": {
+    "melody": {
+     "longest_run": 4.38,
+     "longest_share": 0.10269683425960559,
+     "gram_overlap": 0.10640474597648526,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.09,
+     "longest_share": 0.16705735381590844,
+     "gram_overlap": 0.6936622803471657,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 12.49,
+     "longest_share": 0.28011680687255636,
+     "gram_overlap": 0.9309424192332634,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.98,
+     "longest_share": 0.11507277171152368,
+     "gram_overlap": 0.20538579473929094,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0004868531765800581,
+    "pair_overlap pitch step": 0.013499576193078374,
+    "pair_overlap length": 0.14799363161817788,
+    "pair_overlap loudness": 0.003034233505558548
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 3.559878789883583,
+     "pitch": 2.058731734572728,
+     "loudness": 8.154967309233934
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 4.0
+  },
+  "MDP 4x": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 1.0,
+    "ends on a long note": 1.0,
+    "strong beats minus offbeats": 21.01035419711034
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.1150640052809903,
+     "p5": 0.10194438978124948,
+     "p95": 0.13321482491617515
+    },
+    "pitch class": {
+     "mean": 0.054589369757066575,
+     "p5": 0.04806697323890062,
+     "p95": 0.06246890819710881
+    },
+    "pitch step": {
+     "mean": 0.08039384186052856,
+     "p5": 0.07006492111230833,
+     "p95": 0.09196198681646968
+    },
+    "length": {
+     "mean": 0.14181913118628808,
+     "p5": 0.1275110130802656,
+     "p95": 0.15504631293560744
+    },
+    "length pair": {
+     "mean": 0.23603413433191897,
+     "p5": 0.22136286648728246,
+     "p95": 0.2530153355120238
+    },
+    "loudness": {
+     "mean": 0.4605717738886629,
+     "p5": 0.4517384183081883,
+     "p95": 0.47057533252363737
+    },
+    "loudness step": {
+     "mean": 0.23618405250720645,
+     "p5": 0.22695007496275715,
+     "p95": 0.2451411056146273
+    }
+   },
+   "entropy": {
+    "pitch": 3.9108303768037627,
+    "pitch class": 2.6249090224022242,
+    "pitch step": 3.324727495608794,
+    "length": 2.1979172152096034,
+    "length pair": 3.96812761832848,
+    "loudness": 3.797385202529394,
+    "loudness step": 4.833806925930086
+   },
+   "features": {
+    "notes": {
+     "mean": 44.89,
+     "ks": 0.35094594594594597
+    },
+    "distinct pitches": {
+     "mean": 11.66,
+     "ks": 0.6694594594594594
+    },
+    "pitch range": {
+     "mean": 21.93,
+     "ks": 0.7629729729729731
+    },
+    "mean step size": {
+     "mean": 2.361059234722776,
+     "ks": 0.13094594594594594
+    },
+    "rests": {
+     "mean": 0.87,
+     "ks": 0.1327027027027028
+    },
+    "silent sixteenths": {
+     "mean": 4.61,
+     "ks": 0.37391891891891893
+    },
+    "loudness range": {
+     "mean": 24.695,
+     "ks": 0.6747297297297297
+    },
+    "mean loudness step": {
+     "mean": 7.199741327893193,
+     "ks": 0.4514864864864865
+    }
+   },
+   "rests between notes": 4.61,
+   "copying": {
+    "melody": {
+     "longest_run": 4.42,
+     "longest_share": 0.10160769048658914,
+     "gram_overlap": 0.09577036917286004,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 6.94,
+     "longest_share": 0.15977674444058224,
+     "gram_overlap": 0.7142320060950835,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 12.38,
+     "longest_share": 0.2721746392104031,
+     "gram_overlap": 0.9293638284286705,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 5.78,
+     "longest_share": 0.1290846730303747,
+     "gram_overlap": 0.23232499911819865,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0002896168464709938,
+    "pair_overlap pitch step": 0.014402890296082847,
+    "pair_overlap length": 0.1513660242129789,
+    "pair_overlap loudness": 0.014935672749474636
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 4.259610038966964,
+     "pitch": 2.164799416210903,
+     "loudness": 41.25167033583557
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 4.0
+  },
+  "MDP without long ending": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.86,
+    "ends on a long note": 0.05,
+    "strong beats minus offbeats": 2.9005353346378153
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.10669587907899918,
+     "p5": 0.09521103579127056,
+     "p95": 0.11762919624811854
+    },
+    "pitch class": {
+     "mean": 0.05499404389542902,
+     "p5": 0.04991376683847936,
+     "p95": 0.06043093885288189
+    },
+    "pitch step": {
+     "mean": 0.0825319207516523,
+     "p5": 0.0751310595268799,
+     "p95": 0.08899420487698304
+    },
+    "length": {
+     "mean": 0.14512476562436785,
+     "p5": 0.12904684535742902,
+     "p95": 0.16491850530970936
+    },
+    "length pair": {
+     "mean": 0.23949083295649823,
+     "p5": 0.22470726042626857,
+     "p95": 0.26132507004721284
+    },
+    "loudness": {
+     "mean": 0.1549427090039869,
+     "p5": 0.14737586790565332,
+     "p95": 0.16257550758559047
+    },
+    "loudness step": {
+     "mean": 0.09188677478682113,
+     "p5": 0.08408154347637195,
+     "p95": 0.09856004655473251
+    }
+   },
+   "entropy": {
+    "pitch": 3.9031127677953408,
+    "pitch class": 2.6151485038134794,
+    "pitch step": 3.3561678957005774,
+    "length": 2.0867779773801334,
+    "length pair": 3.843928978804093,
+    "loudness": 4.450316264643288,
+    "loudness step": 4.716340018209015
+   },
+   "features": {
+    "notes": {
+     "mean": 47.805,
+     "ks": 0.425
+    },
+    "distinct pitches": {
+     "mean": 12.075,
+     "ks": 0.7144594594594594
+    },
+    "pitch range": {
+     "mean": 23.02,
+     "ks": 0.797972972972973
+    },
+    "mean step size": {
+     "mean": 2.396695324565983,
+     "ks": 0.11378378378378373
+    },
+    "rests": {
+     "mean": 1.085,
+     "ks": 0.25256756756756754
+    },
+    "silent sixteenths": {
+     "mean": 6.345,
+     "ks": 0.35540540540540533
+    },
+    "loudness range": {
+     "mean": 23.99,
+     "ks": 0.5295945945945946
+    },
+    "mean loudness step": {
+     "mean": 5.0261895695852665,
+     "ks": 0.35689189189189185
+    }
+   },
+   "rests between notes": 6.345,
+   "copying": {
+    "melody": {
+     "longest_run": 4.54,
+     "longest_share": 0.09753465572469601,
+     "gram_overlap": 0.10925519233954309,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.17,
+     "longest_share": 0.15430736727611702,
+     "gram_overlap": 0.6818278375861689,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 13.31,
+     "longest_share": 0.27076858852180563,
+     "gram_overlap": 0.935846701829055,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.77,
+     "longest_share": 0.10032099716113405,
+     "gram_overlap": 0.1958471455828117,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0005135143664955285,
+    "pair_overlap pitch step": 0.013748185842802614,
+    "pair_overlap length": 0.16799127668140554,
+    "pair_overlap loudness": 0.0008238299934434397
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 0.0,
+     "pitch": 1.2850405469950417,
+     "loudness": 1.6791385925878688
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 4.3
+  },
+  "MDP without ending on C": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.18,
+    "ends on a long note": 0.755,
+    "strong beats minus offbeats": 3.2535768630993624
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.11795916596278566,
+     "p5": 0.1027593755933613,
+     "p95": 0.13312692401032863
+    },
+    "pitch class": {
+     "mean": 0.06789158101381344,
+     "p5": 0.06000094666233907,
+     "p95": 0.07677409347359844
+    },
+    "pitch step": {
+     "mean": 0.08168550170298874,
+     "p5": 0.074413354099435,
+     "p95": 0.09050048932554455
+    },
+    "length": {
+     "mean": 0.12757900781320783,
+     "p5": 0.11538283290541036,
+     "p95": 0.13874406284252833
+    },
+    "length pair": {
+     "mean": 0.22051381357264613,
+     "p5": 0.21055125684074052,
+     "p95": 0.23104106193183793
+    },
+    "loudness": {
+     "mean": 0.1483292128421869,
+     "p5": 0.14088129910149544,
+     "p95": 0.15955637495628408
+    },
+    "loudness step": {
+     "mean": 0.08824570567775283,
+     "p5": 0.0814181122084879,
+     "p95": 0.09516151860688289
+    }
+   },
+   "entropy": {
+    "pitch": 3.964241784196762,
+    "pitch class": 2.639777981869194,
+    "pitch step": 3.3199162598891636,
+    "length": 2.139339451441158,
+    "length pair": 3.879607704954055,
+    "loudness": 4.459573397188094,
+    "loudness step": 4.719085942507128
+   },
+   "features": {
+    "notes": {
+     "mean": 46.87,
+     "ks": 0.37391891891891893
+    },
+    "distinct pitches": {
+     "mean": 12.12,
+     "ks": 0.7094594594594594
+    },
+    "pitch range": {
+     "mean": 22.6,
+     "ks": 0.747972972972973
+    },
+    "mean step size": {
+     "mean": 2.3281248600010844,
+     "ks": 0.11486486486486486
+    },
+    "rests": {
+     "mean": 0.805,
+     "ks": 0.17270270270270272
+    },
+    "silent sixteenths": {
+     "mean": 4.435,
+     "ks": 0.39891891891891895
+    },
+    "loudness range": {
+     "mean": 23.745,
+     "ks": 0.5045945945945947
+    },
+    "mean loudness step": {
+     "mean": 5.051773071988826,
+     "ks": 0.3198648648648649
+    }
+   },
+   "rests between notes": 4.435,
+   "copying": {
+    "melody": {
+     "longest_run": 4.49,
+     "longest_share": 0.10011175644021861,
+     "gram_overlap": 0.11449577642205637,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.04,
+     "longest_share": 0.1575422031420941,
+     "gram_overlap": 0.7130802162089894,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 12.78,
+     "longest_share": 0.27146981575836204,
+     "gram_overlap": 0.9305933480337094,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.92,
+     "longest_share": 0.10718627817533923,
+     "gram_overlap": 0.19970068368739494,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.000983570570235534,
+    "pair_overlap pitch step": 0.015396785418912411,
+    "pair_overlap length": 0.16325044834679384,
+    "pair_overlap loudness": 0.0010332925854253138
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 2.33218736638445,
+     "pitch": 0.0,
+     "loudness": 1.639019406243191
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 4.2
+  },
+  "MDP without strong beats": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.875,
+    "ends on a long note": 0.77,
+    "strong beats minus offbeats": -0.07996612196837406
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.11173343809469324,
+     "p5": 0.09807489847383465,
+     "p95": 0.12479448183027225
+    },
+    "pitch class": {
+     "mean": 0.05776304171527542,
+     "p5": 0.05316481479077144,
+     "p95": 0.06176460065818094
+    },
+    "pitch step": {
+     "mean": 0.08301953862097426,
+     "p5": 0.07484686293302341,
+     "p95": 0.09134888466623395
+    },
+    "length": {
+     "mean": 0.14997959209969858,
+     "p5": 0.13340981593805137,
+     "p95": 0.16252677170353919
+    },
+    "length pair": {
+     "mean": 0.25027735943028145,
+     "p5": 0.23405818677937867,
+     "p95": 0.2647515998298371
+    },
+    "loudness": {
+     "mean": 0.15763788766108067,
+     "p5": 0.15048387438462815,
+     "p95": 0.166297358855759
+    },
+    "loudness step": {
+     "mean": 0.10208346390800302,
+     "p5": 0.09278882164341189,
+     "p95": 0.11185804759051017
+    }
+   },
+   "entropy": {
+    "pitch": 3.9089639372661034,
+    "pitch class": 2.5968947888353227,
+    "pitch step": 3.3374129730442554,
+    "length": 2.161050765128331,
+    "length pair": 3.908142393149125,
+    "loudness": 4.426842525091638,
+    "loudness step": 4.689176921601634
+   },
+   "features": {
+    "notes": {
+     "mean": 45.46,
+     "ks": 0.34094594594594596
+    },
+    "distinct pitches": {
+     "mean": 11.655,
+     "ks": 0.6194594594594593
+    },
+    "pitch range": {
+     "mean": 22.195,
+     "ks": 0.7579729729729731
+    },
+    "mean step size": {
+     "mean": 2.3727577120450167,
+     "ks": 0.08932432432432436
+    },
+    "rests": {
+     "mean": 0.85,
+     "ks": 0.18756756756756754
+    },
+    "silent sixteenths": {
+     "mean": 5.29,
+     "ks": 0.38391891891891894
+    },
+    "loudness range": {
+     "mean": 23.415,
+     "ks": 0.4595945945945946
+    },
+    "mean loudness step": {
+     "mean": 4.885227948451882,
+     "ks": 0.33837837837837836
+    }
+   },
+   "rests between notes": 5.29,
+   "copying": {
+    "melody": {
+     "longest_run": 4.39,
+     "longest_share": 0.09926192246656017,
+     "gram_overlap": 0.10458977393125542,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 6.94,
+     "longest_share": 0.1574958924336289,
+     "gram_overlap": 0.6927288184065155,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 13.01,
+     "longest_share": 0.2822464395314952,
+     "gram_overlap": 0.9390785098750054,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.91,
+     "longest_share": 0.10899410190716152,
+     "gram_overlap": 0.20187439730171258,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0006678699094171682,
+    "pair_overlap pitch step": 0.01382279445318391,
+    "pair_overlap length": 0.14389705399622346,
+    "pair_overlap loudness": 0.0010492018108414812
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 2.46611584565665,
+     "pitch": 1.2738127707021347,
+     "loudness": 0.0
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 4.1
+  },
+  "no leash": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.81,
+    "ends on a long note": 0.865,
+    "strong beats minus offbeats": 7.413545804161864
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.15446260569256007,
+     "p5": 0.13990528899920734,
+     "p95": 0.1645755156231892
+    },
+    "pitch class": {
+     "mean": 0.10124287591759928,
+     "p5": 0.0902914357012025,
+     "p95": 0.11064278186086518
+    },
+    "pitch step": {
+     "mean": 0.2522553481583299,
+     "p5": 0.2418601998032523,
+     "p95": 0.260408096269302
+    },
+    "length": {
+     "mean": 0.2938055908073902,
+     "p5": 0.28601148039494223,
+     "p95": 0.2999165386176238
+    },
+    "length pair": {
+     "mean": 0.44579973204256945,
+     "p5": 0.43439533475933073,
+     "p95": 0.45684526399511194
+    },
+    "loudness": {
+     "mean": 0.22988424291455795,
+     "p5": 0.21914071629140303,
+     "p95": 0.23885143150264768
+    },
+    "loudness step": {
+     "mean": 0.14758100635337268,
+     "p5": 0.13838229279461686,
+     "p95": 0.1562387509806958
+    }
+   },
+   "entropy": {
+    "pitch": 4.2131802638545945,
+    "pitch class": 2.8058313589491672,
+    "pitch step": 4.081389692791298,
+    "length": 3.3385397181222336,
+    "length pair": 6.329947323105137,
+    "loudness": 4.552477349656431,
+    "loudness step": 5.1218129737308375
+   },
+   "features": {
+    "notes": {
+     "mean": 31.29,
+     "ks": 0.499054054054054
+    },
+    "distinct pitches": {
+     "mean": 12.875,
+     "ks": 0.8544594594594594
+    },
+    "pitch range": {
+     "mean": 25.495,
+     "ks": 0.8929729729729731
+    },
+    "mean step size": {
+     "mean": 3.8668933425267693,
+     "ks": 0.917972972972973
+    },
+    "rests": {
+     "mean": 3.44,
+     "ks": 0.6512162162162163
+    },
+    "silent sixteenths": {
+     "mean": 19.995,
+     "ks": 0.47405405405405404
+    },
+    "loudness range": {
+     "mean": 23.875,
+     "ks": 0.5245945945945947
+    },
+    "mean loudness step": {
+     "mean": 6.697606933513247,
+     "ks": 0.43945945945945947
+    }
+   },
+   "rests between notes": 19.995,
+   "copying": {
+    "melody": {
+     "longest_run": 2.69,
+     "longest_share": 0.0906255977048987,
+     "gram_overlap": 0.0010600255427841633,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 4.88,
+     "longest_share": 0.16483569346297963,
+     "gram_overlap": 0.25951126767846583,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 6.02,
+     "longest_share": 0.17495375464831722,
+     "gram_overlap": 0.4573464798542833,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.06,
+     "longest_share": 0.1323621861825026,
+     "gram_overlap": 0.08820840963529257,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0,
+    "pair_overlap pitch step": 0.000664329696718314,
+    "pair_overlap length": 0.008019202797710068,
+    "pair_overlap loudness": 0.00013212976539589443
+   },
+   "policy": {
+    "bits per piece": {
+     "rhythm": 48.503301920540025,
+     "pitch": 30.94075192866477,
+     "loudness": 48.160963052072304
+    },
+    "choices the baseline rules out": {}
+   },
+   "seconds": 1.5
+  },
+  "baseline, rhythm memory 2 (added after the baseline)": {
+   "success_rate": 1.0,
+   "rules": {
+    "ends on C": 0.255,
+    "ends on a long note": 0.105,
+    "strong beats minus offbeats": -0.013202215059899752
+   },
+   "tv": {
+    "pitch": {
+     "mean": 0.12047146897768676,
+     "p5": 0.10671085189465064,
+     "p95": 0.1366403539533997
+    },
+    "pitch class": {
+     "mean": 0.0710082337911799,
+     "p5": 0.061915616173109374,
+     "p95": 0.08055376678256239
+    },
+    "pitch step": {
+     "mean": 0.08623327598350498,
+     "p5": 0.0792330326733296,
+     "p95": 0.0948251776310699
+    },
+    "length": {
+     "mean": 0.14486284000938976,
+     "p5": 0.12991811142715248,
+     "p95": 0.1584275546467009
+    },
+    "length pair": {
+     "mean": 0.23853959613836667,
+     "p5": 0.2204589472718992,
+     "p95": 0.25625818065487205
+    },
+    "loudness": {
+     "mean": 0.14316523284319668,
+     "p5": 0.1348611580739365,
+     "p95": 0.14991056469034136
+    },
+    "loudness step": {
+     "mean": 0.08763601535717083,
+     "p5": 0.08215645223144312,
+     "p95": 0.09353991358774953
+    }
+   },
+   "entropy": {
+    "pitch": 3.9415505827393855,
+    "pitch class": 2.6286594316948677,
+    "pitch step": 3.3370229695926286,
+    "length": 2.089531863248867,
+    "length pair": 3.85817072073349,
+    "loudness": 4.461237205388394,
+    "loudness step": 4.721849076997556
+   },
+   "features": {
+    "notes": {
+     "mean": 47.775,
+     "ks": 0.385
+    },
+    "distinct pitches": {
+     "mean": 12.29,
+     "ks": 0.7294594594594594
+    },
+    "pitch range": {
+     "mean": 23.46,
+     "ks": 0.807972972972973
+    },
+    "mean step size": {
+     "mean": 2.401046829784296,
+     "ks": 0.11432432432432438
+    },
+    "rests": {
+     "mean": 0.955,
+     "ks": 0.20756756756756756
+    },
+    "silent sixteenths": {
+     "mean": 5.695,
+     "ks": 0.348918918918919
+    },
+    "loudness range": {
+     "mean": 23.74,
+     "ks": 0.5095945945945947
+    },
+    "mean loudness step": {
+     "mean": 5.050580516373918,
+     "ks": 0.32594594594594595
+    }
+   },
+   "rests between notes": 5.695,
+   "copying": {
+    "melody": {
+     "longest_run": 4.49,
+     "longest_share": 0.09794630830879507,
+     "gram_overlap": 0.11953226169412978,
+     "full_copy": 0
+    },
+    "pitch step": {
+     "longest_run": 7.13,
+     "longest_share": 0.1562697819624413,
+     "gram_overlap": 0.6786466881713886,
+     "full_copy": 0
+    },
+    "length": {
+     "longest_run": 14.18,
+     "longest_share": 0.2953452649860614,
+     "gram_overlap": 0.9734363034001721,
+     "full_copy": 0
+    },
+    "loudness": {
+     "longest_run": 4.75,
+     "longest_share": 0.10194653909393311,
+     "gram_overlap": 0.18634051778018168,
+     "full_copy": 0
+    }
+   },
+   "diversity": {
+    "unique_pieces": 1.0,
+    "unique_melodies": 1.0,
+    "pair_overlap melody": 0.0005078430619038662,
+    "pair_overlap pitch step": 0.01463262318058534,
+    "pair_overlap length": 0.15840885001947025,
+    "pair_overlap loudness": 0.0006971466094617019
+   },
+   "policy": null,
+   "seconds": 2.1
+  }
+ },
+ "seconds": 106.6
+}

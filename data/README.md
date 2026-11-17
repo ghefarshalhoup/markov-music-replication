@@ -12,8 +12,8 @@ The SuperWillow files are redistributed unchanged under the project's license
 to their composers and to W. Schulze and B. van der Merwe. Two Melted file names lost
 their apostrophes so they could be saved on Windows.
 
-## POP909 (phase 2, not included)
+## POP909 (baseline and MDP, not included)
 
-`scripts/audit_pop909.py` expects the [POP909 dataset](https://github.com/music-x-lab/POP909-Dataset)
+`scripts/audit_pop909.py`, `run_baseline.py` and the MDP scripts expect the [POP909 dataset](https://github.com/music-x-lab/POP909-Dataset)
 with the contents of its `POP909/` folder copied into `raw/pop909/` (`raw/pop909/index.xlsx`,
 `raw/pop909/001/001.mid`, ...). It is not included here because of its size (about 40 MB).

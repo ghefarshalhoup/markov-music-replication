@@ -3,3 +3,9 @@ __pycache__/
 *.pyc
 .pytest_cache/
 data/raw/pop909/
+
+# poster drafts (built on the chair's template; not published)
+poster/
+scripts/build_poster.py
+scripts/make_emblem.py
+reports/poster_content.md

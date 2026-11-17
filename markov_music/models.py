@@ -32,8 +32,8 @@ class HigherOrderMC:
     kind = "higher"
 
     def __init__(self, order: int):
-        if order < 1:
-            raise ValueError("order must be >= 1")
+        if order < 0:
+            raise ValueError("order must be >= 0")
         self.order = order
         self.table: dict[State, dict] = {}
 

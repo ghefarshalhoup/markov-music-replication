@@ -1,0 +1,338 @@
+{
+ "training songs": 80,
+ "training excerpts": 662,
+ "baseline pieces": 1000,
+ "A range": {
+  "range per excerpt": {
+   "real": {
+    "mean": 13.243202416918429,
+    "sd": 2.9726457873675898,
+    "p5": 9.0,
+    "p50": 13.0,
+    "p95": 19.0,
+    "n": 662
+   },
+   "baseline": {
+    "mean": 22.769,
+    "sd": 5.2863634948800104,
+    "p5": 14.0,
+    "p50": 23.0,
+    "p95": 31.0,
+    "n": 1000
+   }
+  },
+  "middle pitch per excerpt": {
+   "real": {
+    "mean": 70.90634441087613,
+    "sd": 6.332753460776466,
+    "p5": 60.050000000000004,
+    "p50": 72.0,
+    "p95": 81.0,
+    "n": 662
+   },
+   "baseline": {
+    "mean": 69.787,
+    "sd": 4.678208097124368,
+    "p5": 62.0,
+    "p50": 71.0,
+    "p95": 76.0,
+    "n": 1000
+   }
+  },
+  "one fixed band, best placement": {
+   "13": {
+    "band": [
+     67,
+     80
+    ],
+    "real excerpts fully inside": 0.1646525679758308,
+    "baseline pieces fully inside": 0.009
+   },
+   "15": {
+    "band": [
+     66,
+     81
+    ],
+    "real excerpts fully inside": 0.3066465256797583,
+    "baseline pieces fully inside": 0.029
+   },
+   "19": {
+    "band": [
+     67,
+     86
+    ],
+    "real excerpts fully inside": 0.4652567975830816,
+    "baseline pieces fully inside": 0.078
+   },
+   "21": {
+    "band": [
+     60,
+     81
+    ],
+    "real excerpts fully inside": 0.5392749244712991,
+    "baseline pieces fully inside": 0.191
+   }
+  },
+  "distance from the piece's first note": {
+   "real": {
+    "farthest note": {
+     "mean": 9.954682779456194,
+     "sd": 2.895104859953507,
+     "p5": 5.0,
+     "p50": 10.0,
+     "p95": 15.0,
+     "n": 662
+    },
+    "notes within an octave": 0.9859154929577465,
+    "pieces fully within an octave": 0.8640483383685801
+   },
+   "baseline": {
+    "farthest note": {
+     "mean": 17.281,
+     "sd": 5.4561927202033464,
+     "p5": 9.0,
+     "p50": 17.0,
+     "p95": 28.0,
+     "n": 1000
+    },
+    "notes within an octave": 0.8329807532769206,
+    "pieces fully within an octave": 0.241
+   }
+  },
+  "pull back to the middle (slope of next step on distance)": {
+   "real": {
+    "own middle": -0.28282715951980464,
+    "one fixed middle": -0.10406584011928527
+   },
+   "baseline": {
+    "own middle": -0.14772771095635087,
+    "one fixed middle": -0.10292903042207442
+   }
+  }
+ },
+ "B ending on C": {
+  "real": {
+   "last note of the song": {
+    "C": 0.8375,
+    "C, E or G": 0.9,
+    "n": 80
+   },
+   "before a rest of 1 beat or more": {
+    "C": 0.29504950495049503,
+    "C, E or G": 0.6762376237623763,
+    "n": 1010
+   },
+   "before a rest of 2 beats or more": {
+    "C": 0.4550408719346049,
+    "C, E or G": 0.6839237057220708,
+    "n": 367
+   },
+   "before a rest of 1 bar or more": {
+    "C": 0.6824324324324325,
+    "C, E or G": 0.831081081081081,
+    "n": 148
+   },
+   "all notes": {
+    "C": 0.21391679637752936,
+    "C, E or G": 0.599405688410924,
+    "n": 28268
+   },
+   "last note of an 8-bar excerpt": {
+    "C": 0.3187311178247734,
+    "C, E or G": 0.6510574018126888,
+    "n": 662
+   }
+  },
+  "songs with C more common before rests than overall": {
+   "share": 0.6825396825396826,
+   "songs": 63
+  },
+  "pitch class of the song's last note": {
+   "0": 67,
+   "9": 7,
+   "7": 3,
+   "4": 2,
+   "2": 1
+  },
+  "baseline": {
+   "all notes": {
+    "C": 0.21575825452132072
+   },
+   "last note of the piece": {
+    "C": 0.221,
+    "C, E or G": 0.623
+   }
+  }
+ },
+ "C ending on a long note": {
+  "real: last note of the song": {
+   "median": 12.0,
+   "share >= 8": 0.7875,
+   "n": 80
+  },
+  "real: note before a rest of 1 bar or more": {
+   "median": 11.0,
+   "share >= 8": 0.722972972972973,
+   "n": 148
+  },
+  "real: all notes": {
+   "median": 2.0,
+   "share >= 8": 0.04294608744870525,
+   "n": 28268
+  },
+  "baseline: last note of the piece": {
+   "median": 2.0,
+   "share >= 8": 0.07,
+   "n": 1000
+  },
+  "baseline: pieces ending on a rest": 0.042
+ },
+ "D louder on strong beats": {
+  "real, by position in the bar": {
+   "beat 1": {
+    "share of notes": 0.1366290524807451,
+    "velocity above the song's median": 1.738856843209229,
+    "level": 14.332983744100682
+   },
+   "beat 3": {
+    "share of notes": 0.10979759985670787,
+    "velocity above the song's median": 1.300489396411093,
+    "level": 13.927569331158239
+   },
+   "beats 2 and 4": {
+    "share of notes": 0.20569586243954863,
+    "velocity above the song's median": 0.8014629049111808,
+    "level": 13.672587948450017
+   },
+   "eighth offbeats": {
+    "share of notes": 0.3872111767866738,
+    "velocity above the song's median": -0.7111666204089185,
+    "level": 12.52872606161532
+   },
+   "sixteenth offbeats": {
+    "share of notes": 0.16066630843632457,
+    "velocity above the song's median": -2.6552954292084725,
+    "level": 11.280044593088071
+   }
+  },
+  "real: strong beats minus offbeats, per song": {
+   "velocity": 3.178862985511311,
+   "in units of the usual spread": 0.35185770126820903,
+   "songs where strong beats are louder": 70,
+   "songs": 80
+  },
+  "real: same, notes of one length only": {
+   "2": 1.7681741860856803,
+   "4": 0.9734973323757803
+  },
+  "baseline: velocity above the median, by position": {
+   "beat 1": -0.47632004605199557,
+   "beat 3": -0.18950182573255325,
+   "beats 2 and 4": -0.13120855283251212,
+   "eighth offbeats": -0.232536591148116,
+   "sixteenth offbeats": -0.23708534564145012
+  },
+  "baseline: strong beats minus offbeats": -0.13683163649019342
+ },
+ "E silence": {
+  "real excerpts: silent sixteenths by where they are": {
+   "before the first note": 8.475830815709969,
+   "after the last note": 4.602719033232629,
+   "rests between notes": 8.290030211480362,
+   "long notes shortened to a kept length": 0.8066465256797583,
+   "total, as in the baseline report": 22.17522658610272
+  },
+  "real rests (whole training songs)": {
+   "count": 1010,
+   "length": {
+    "mean": 15.898019801980197,
+    "sd": 33.099258106004804,
+    "p5": 4.0,
+    "p50": 6.0,
+    "p95": 71.54999999999995,
+    "n": 1010
+   },
+   "share crossing a bar line": 0.3336633663366337,
+   "share of rest time in rests crossing a bar line": 0.7616615806190447,
+   "where in the bar they start (sixteenth 0-15)": {
+    "0": 68,
+    "1": 20,
+    "2": 37,
+    "3": 47,
+    "4": 73,
+    "5": 47,
+    "6": 51,
+    "7": 63,
+    "8": 88,
+    "9": 66,
+    "10": 101,
+    "11": 84,
+    "12": 145,
+    "13": 31,
+    "14": 44,
+    "15": 24
+   }
+  },
+  "rests repeating every k bars: share at the busiest phase": {
+   "2": {
+    "real": 0.6843512745130742,
+    "if rests fell in random bars": 0.6056674990117447,
+    "songs": 55
+   },
+   "3": {
+    "real": 0.43242883090767836,
+    "if rests fell in random bars": 0.4649501243347124,
+    "songs": 55
+   },
+   "4": {
+    "real": 0.42495890113412094,
+    "if rests fell in random bars": 0.3917661164532557,
+    "songs": 55
+   },
+   "8": {
+    "real": 0.28322908795771207,
+    "if rests fell in random bars": 0.27101796034781545,
+    "songs": 55
+   }
+  },
+  "generated rhythm under each bar rule": {
+   "no note or rest crosses a bar line (baseline)": {
+    "silent sixteenths": 5.884,
+    "notes per piece": 48.006,
+    "bars with a note on beat 1": 0.968125,
+    "length distance from training songs (TV)": 0.06171890717936822
+   },
+   "rests may cross bar lines, notes may not": {
+    "silent sixteenths": 10.569,
+    "notes per piece": 45.961,
+    "bars with a note on beat 1": 0.887875,
+    "length distance from training songs (TV)": 0.04755072958323012
+   },
+   "no bar rule": {
+    "silent sixteenths": 10.155,
+    "notes per piece": 42.948,
+    "bars with a note on beat 1": 0.46381452542589985,
+    "length distance from training songs (TV)": 0.015174098879597257
+   }
+  },
+  "real excerpts: bars with a note on beat 1": 0.7302065404475043
+ },
+ "F already matched": {
+  "real excerpts": {
+   "steps of 2 semitones or less": 0.677779159928681,
+   "repeated notes": 0.2399137537836381,
+   "leaps of more than 7 semitones": 0.03723514533316748,
+   "notes in C major": 0.9964889624278623,
+   "note onsets on beat 1": 0.13697082206707292,
+   "note onsets on sixteenth offbeats": 0.15371887485370678
+  },
+  "baseline": {
+   "steps of 2 semitones or less": 0.6729286682480515,
+   "repeated notes": 0.24216367333107422,
+   "leaps of more than 7 semitones": 0.04038885123686886,
+   "notes in C major": 0.9964741994358719,
+   "note onsets on beat 1": 0.1607765057242409,
+   "note onsets on sixteenth offbeats": 0.1556952049112328
+  }
+ }
+}

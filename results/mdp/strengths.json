@@ -1,0 +1,120 @@
+{
+ "targets (real training songs)": {
+  "ends on a long note": 0.7875,
+  "ends on C": 0.8375,
+  "strong beats minus offbeats": 3.178862985511311
+ },
+ "strengths": {
+  "length": 3.9938334639746245,
+  "pitch": 2.9373709932779093,
+  "level": 0.02787242263555527
+ },
+ "sweep": {
+  "0": {
+   "rules": {
+    "ends on C": 0.205,
+    "ends on a long note": 0.075,
+    "strong beats minus offbeats": -0.29680586110138757
+   },
+   "bits changed per piece (KL from the baseline)": {
+    "rhythm": 0.0,
+    "pitch": 0.0,
+    "loudness": 0.0
+   },
+   "per piece": {
+    "notes": 48.071,
+    "pitch range": 22.854,
+    "distinct pitches": 12.15,
+    "mean step size": 2.372412098722665,
+    "loudness range": 23.638,
+    "mean loudness step": 4.910192717359118
+   },
+   "unique pieces": 1.0
+  },
+  "0.5": {
+   "rules": {
+    "ends on C": 0.545,
+    "ends on a long note": 0.345,
+    "strong beats minus offbeats": 1.504404051085367
+   },
+   "bits changed per piece (KL from the baseline)": {
+    "rhythm": 0.47164016954977794,
+    "pitch": 0.3695936326732972,
+    "loudness": 0.37533322678844483
+   },
+   "per piece": {
+    "notes": 47.168,
+    "pitch range": 22.668,
+    "distinct pitches": 11.966,
+    "mean step size": 2.374964885450541,
+    "loudness range": 23.659,
+    "mean loudness step": 4.976237949371024
+   },
+   "unique pieces": 1.0
+  },
+  "1": {
+   "rules": {
+    "ends on C": 0.851,
+    "ends on a long note": 0.782,
+    "strong beats minus offbeats": 2.972546354013906
+   },
+   "bits changed per piece (KL from the baseline)": {
+    "rhythm": 2.398328887419645,
+    "pitch": 1.276043558146816,
+    "loudness": 1.5955225295227977
+   },
+   "per piece": {
+    "notes": 45.762,
+    "pitch range": 22.673,
+    "distinct pitches": 11.914,
+    "mean step size": 2.3750669031000853,
+    "loudness range": 23.765,
+    "mean loudness step": 5.0933130111289975
+   },
+   "unique pieces": 1.0
+  },
+  "2": {
+   "rules": {
+    "ends on C": 0.986,
+    "ends on a long note": 0.996,
+    "strong beats minus offbeats": 8.033186762325373
+   },
+   "bits changed per piece (KL from the baseline)": {
+    "rhythm": 3.903197954868468,
+    "pitch": 2.1194283625494545,
+    "loudness": 8.46678709664783
+   },
+   "per piece": {
+    "notes": 45.102,
+    "pitch range": 22.591,
+    "distinct pitches": 11.828,
+    "mean step size": 2.3783033218706198,
+    "loudness range": 24.093,
+    "mean loudness step": 5.562254769519869
+   },
+   "unique pieces": 1.0
+  },
+  "4": {
+   "rules": {
+    "ends on C": 1.0,
+    "ends on a long note": 1.0,
+    "strong beats minus offbeats": 21.158038962736295
+   },
+   "bits changed per piece (KL from the baseline)": {
+    "rhythm": 3.96733599003623,
+    "pitch": 2.2199323668839632,
+    "loudness": 41.93382625073949
+   },
+   "per piece": {
+    "notes": 45.091,
+    "pitch range": 22.576,
+    "distinct pitches": 11.818,
+    "mean step size": 2.3764892539237894,
+    "loudness range": 24.776,
+    "mean loudness step": 7.043176593236404
+   },
+   "unique pieces": 1.0
+  }
+ },
+ "seconds": 426.5
+}

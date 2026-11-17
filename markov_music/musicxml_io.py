@@ -16,6 +16,7 @@ class Event:
     onset: int          # sixteenths from the start of the piece
     duration: int       # sixteenths
     pitches: tuple[int, ...]
+    velocity: int | None = None   # None = write_midi's default
 
 
 @dataclass
@@ -153,7 +154,7 @@ def write_musicxml(path: str | Path, title: str, tempo: int, n_bars: int,
 
 
 def write_midi(path: str | Path, tempo: int, parts: dict[str, list[Event]], velocity: int = 90) -> None:
-    """Every note gets the same velocity: the paper's data marks every note forte."""
+    """A note without its own velocity gets the default: the paper's data marks every note forte."""
     ticks = 120  # per sixteenth (480 per quarter)
     mid = mido.MidiFile(ticks_per_beat=4 * ticks)
     for channel, (name, events) in enumerate(parts.items()):
@@ -164,7 +165,8 @@ def write_midi(path: str | Path, tempo: int, parts: dict[str, list[Event]], velo
         messages = []
         for e in events:
             for p in e.pitches:
-                messages.append((e.onset * ticks, 1, mido.Message("note_on", note=p, velocity=velocity, channel=channel)))
+                on = velocity if e.velocity is None else e.velocity
+                messages.append((e.onset * ticks, 1, mido.Message("note_on", note=p, velocity=on, channel=channel)))
                 messages.append(((e.onset + e.duration) * ticks, 0, mido.Message("note_off", note=p, velocity=0, channel=channel)))
         now = 0
         for t, _, msg in sorted(messages, key=lambda m: (m[0], m[1])):

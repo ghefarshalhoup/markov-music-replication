@@ -108,21 +108,59 @@ From the second run on, such a note is kept with a length of one sixteenth. It i
 
 Two descriptive measurements were added to interpret rule 11: the unquantised gaps between notes, and the share of rests of at least one beat.
 
-## Open question raised by the audit (decision pending)
+## Decisions after the audit (2026-11-06)
 
-**Rule 11 measures articulation, not only rests.** By the rule, 39.3% of melody notes are followed by a rest, far above the 5% threshold, so the pre-registered decision is "rest symbol". But:
+These were taken after the audit and before any model was trained on POP909. The files in `results/pop909_audit/` still show the rules as first written.
+
+### Deviation 2: rule 11 (rests)
+
+**What we found:** rule 11 measures articulation, not only rests. By the rule, 39.3% of melody notes are followed by a rest, far above the 5% threshold, so the pre-registered decision was "rest symbol". But:
 - note onsets sit on the grid (median song: 100% within 20 ms), while note ends mostly do not (median song: 24%);
 - 77% of the "rests" last exactly one sixteenth;
 - only 3.4% of notes are followed by a gap of at least one beat.
 
 Example, song 001: notes start every eighth note but sound for a sixteenth. That is detached singing, which the rule counts as a rest after every note.
 
-**Proposed deviation 2** (not applied; awaiting a decision):
-- a note's duration is the time to the next onset (the inter-onset interval), which is reliable because onsets are on the grid;
-- only gaps of at least one beat become rest symbols;
-- note ends are kept as a separate, optional "articulation" measure.
+**Revised rule:**
+- a note's length is the time to the next onset (the inter-onset interval), which is reliable because onsets are on the grid;
+- a gap of at least one beat (4 sixteenths) becomes a rest symbol with its own length, and the note before it keeps its sounding length;
+- note ends are not modelled. They can still be reported as a separate articulation measure.
 
-This matches the paper's representation (note values that fill the bar, no rests) while keeping phrase breaks.
+**Effect**, on the 335 songs of the pool below (a read-only check; the baseline's data step must reproduce these numbers):
+
+| | Rule as written | Revised rule |
+|---|---|---|
+| Most common length | sixteenth, 45.7% | eighth, 48.8% |
+| Rests per 100 notes | 39.0 | 3.4 |
+
+This matches the paper's representation (note values that fill the bar, no rests) while keeping phrase breaks. **What is lost:** whether a note is sung detached or smooth. The paper did not model that either.
+
+### Scope decision: the songs used (replaces the splitting branch of rule 16)
+
+A large corpus is not a research aim of this project, so we use a small, uniform one. This was decided after seeing the song counts per group, and before seeing any model result.
+
+- **Pool:** songs that passed rules 9, 10 and 15, and whose only key segment is major: 335 songs, 114,187 notes. Left out: 296 single-key minor songs and 114 songs that change key.
+- **Why:** the paper's data is all in C major. One mode gives every song the same scale, and no song has to be cut apart.
+- **Limitation:** the findings apply to major-key pop melodies.
+- **Sample:** 100 songs, fixed now and not changed after seeing results. Sort the pool by song id and shuffle it with NumPy `default_rng(20261106)`. The first 80 songs are for training, the next 10 for validation, the last 10 for testing.
+
+**Velocity:** rules 13 and 14 are not re-measured on this sample. Velocity stays relative to each song's median, with k = 39 bins requested. The bin edges come from the training songs only, and the number of levels that results is reported.
+
+### Baseline setup
+
+- **Track:** the MELODY track, final version.
+- **Models:** three separate higher-order chains (pitch, length, velocity), each conditioned on its own last n values.
+- **No chords.** This is the main difference from the paper, whose melody follows a chord plan. The brief defines the MDP state as the last notes, and the baseline has to share that state.
+- **Key:** every song is moved to C major by the smallest transposition.
+- **Length of output:** 8-bar pieces.
+- **Bar lines:** as in the paper, a generated note or rest stays inside its bar. On the 335 songs of the pool, 4.0% of notes and 32.9% of rests cross a bar line, so this removes held notes across a bar line and long rests over one.
+- **Pitch symbols:** actual notes (MIDI numbers after moving to C). The paper's contour-and-degree symbols exist to fit a melody to chords, which the baseline does not have, and decoding them loses leaps over an octave. After moving to C, 99.7% of notes fall in the C major scale (worst song 93.4%), which also supports the key labels.
+- **Smoothing:** Witten–Bell, only when scoring held-out songs. Generation uses raw counts, as in the paper.
+
+### Fixed in advance, measured on the sample
+
+- **Rare lengths:** keep the most common lengths that together cover 99% of the training notes and rests. Any other length moves to the nearest kept length of the same kind (note or rest).
+- **Memory length n:** for each chain, the n that best predicts the validation songs (bits per note). Results are reported for every n, as in the paper.
 
 ## Also reported (description only, no rule)
 

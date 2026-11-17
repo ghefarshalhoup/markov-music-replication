@@ -7,28 +7,23 @@ per_song.csv and summary.md.
 """
 from __future__ import annotations
 
-import bisect
 import csv
 import json
-import math
 import statistics
-import zipfile
-import xml.etree.ElementTree as ET
+import sys
 from collections import Counter
-from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
-import mido
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-DATA = ROOT / "data" / "raw" / "pop909"
+sys.path.insert(0, str(ROOT))
+
+from markov_music.pop909 import BAR_STEADY_MIN, DATA, GRID_MIN_SHARE, audit_song, read_index  # noqa: E402
+
 OUT = ROOT / "results" / "pop909_audit"
 
 # Thresholds exactly as fixed in reports/pop909_audit_rules.md
-TOL_S = 0.020                  # "within 20 ms"
-GRID_MIN_SHARE = 0.95          # rule 9
-BAR_STEADY_MIN = 0.90          # rule 10 (deviation 1)
 REST_MIN_SHARE = 0.05          # rule 11
 INFO_MIN_SHARE = 0.90          # rule 13
 LEVELS = range(2, 65)          # rule 13
@@ -36,173 +31,6 @@ BETWEEN_SONG_MIN = 0.50        # rule 14
 KEY_CHANGE_MAX_SHARE = 0.10    # rule 16
 MIN_PART_BARS = 8              # rule 16, when songs are split
 BAR = 16                       # sixteenths per 4/4 bar
-
-
-# --- reading ---------------------------------------------------------------
-
-def read_index() -> dict[str, tuple[int, int]]:
-    """song id -> (beats per measure, quavers per beat), from index.xlsx (standard library only)."""
-    m = "{http://schemas.openxmlformats.org/spreadsheetml/2006/main}"
-    with zipfile.ZipFile(DATA / "index.xlsx") as z:
-        sheet = ET.fromstring(z.read("xl/worksheets/sheet1.xml"))
-
-    def value(cell):
-        if cell.get("t") == "inlineStr":
-            return "".join(t.text or "" for t in cell.iter(m + "t"))
-        return cell.findtext(m + "v")
-
-    rows = [[value(c) for c in r.findall(m + "c")] for r in sheet.iter(m + "row")]
-    head = rows[0]
-    i_id, i_b, i_q = head.index("song_id"), head.index("num_beats_per_measure"), head.index("num_quavers_per_beat")
-    return {r[i_id]: (int(float(r[i_b])), int(float(r[i_q]))) for r in rows[1:]}
-
-
-def read_beats(song: Path) -> tuple[np.ndarray, list[int]]:
-    """Beat times in seconds, and indices of beats that start a 4-beat bar (third column)."""
-    rows = [line.split() for line in (song / "beat_midi.txt").read_text().splitlines() if line.strip()]
-    return np.array([float(r[0]) for r in rows]), [i for i, r in enumerate(rows) if float(r[2]) == 1.0]
-
-
-def read_keys(song: Path) -> list[tuple[float, float, str]]:
-    rows = [line.split() for line in (song / "key_audio.txt").read_text().splitlines() if line.strip()]
-    return [(float(r[0]), float(r[1]), r[2]) for r in rows]
-
-
-def _absolute(track):
-    tick = 0
-    for msg in track:
-        tick += msg.time
-        yield tick, msg
-
-
-def read_melody(path: Path) -> list[tuple[float, float, int, int]] | None:
-    """MELODY track as (onset s, end s, pitch, velocity), using the file's tempo map. None if absent."""
-    mid = mido.MidiFile(path)
-    changes = sorted((t, m.tempo) for tr in mid.tracks for t, m in _absolute(tr) if m.type == "set_tempo")
-    if not changes or changes[0][0] > 0:
-        changes.insert(0, (0, 500_000))
-    starts, secs = [], []
-    for i, (tick, tempo) in enumerate(changes):            # seconds at each tempo change
-        if i == 0:
-            secs.append(0.0)
-        else:
-            prev_tick, prev_tempo = changes[i - 1]
-            secs.append(secs[-1] + (tick - prev_tick) * prev_tempo / 1e6 / mid.ticks_per_beat)
-        starts.append(tick)
-
-    def to_sec(tick):
-        i = bisect.bisect_right(starts, tick) - 1
-        return secs[i] + (tick - starts[i]) * changes[i][1] / 1e6 / mid.ticks_per_beat
-
-    melody = next((tr for tr in mid.tracks if any(m.type == "track_name" and m.name.strip() == "MELODY" for m in tr)), None)
-    if melody is None:
-        return None
-    notes, sounding = [], {}
-    for tick, msg in _absolute(melody):
-        if msg.type == "note_on" and msg.velocity > 0:
-            sounding.setdefault(msg.note, []).append((tick, msg.velocity))
-        elif msg.type in ("note_off", "note_on") and sounding.get(msg.note):
-            start, velocity = sounding[msg.note].pop(0)
-            notes.append((to_sec(start), to_sec(tick), msg.note, velocity))
-    return sorted(notes)
-
-
-# --- the beat grid ---------------------------------------------------------
-
-def grid_position(t: float, beats: np.ndarray) -> tuple[float, float]:
-    """Position of time t in sixteenths of the labelled beats, and the local sixteenth length in seconds.
-    Before the first or after the last beat, the first or last beat interval is extrapolated."""
-    i = int(np.clip(np.searchsorted(beats, t, side="right") - 1, 0, len(beats) - 2))
-    beat = beats[i + 1] - beats[i]
-    return 4 * i + 4 * (t - beats[i]) / beat, beat / 4
-
-
-def off_grid(t: float, beats: np.ndarray, triplets: bool = False) -> float:
-    """Distance in seconds to the nearest sixteenth (or, with triplets, sixteenth or triplet eighth)."""
-    pos, sixteenth = grid_position(t, beats)
-    d = abs(pos - round(pos)) * sixteenth
-    if triplets:
-        third = pos * 3 / 4                                  # position in triplet eighths
-        d = min(d, abs(third - round(third)) * sixteenth * 4 / 3)
-    return d
-
-
-# --- one song --------------------------------------------------------------
-
-@dataclass
-class Song:
-    id: str
-    metre: tuple[int, int]
-    bar_steadiness: float
-    n_raw: int = 0
-    p16_onsets: float = 0.0
-    p16_ends: float = 0.0
-    p_combined: float = 0.0
-    simultaneous: int = 0
-    overlapping: int = 0
-    overlap_ms: list[float] = field(default_factory=list)
-    collisions: int = 0
-    lengthened: int = 0
-    notes: list[tuple[float, int, int, int, int]] = field(default_factory=list)  # onset s, onset q, end q, pitch, velocity
-    gaps16: list[float] = field(default_factory=list)   # unquantised gap to the next note, in sixteenths
-    keys: list[tuple[float, float, str]] = field(default_factory=list)
-    tempo_bpm: float = 0.0
-    n_bars: float = 0.0
-    excluded_by: str = ""
-
-
-def audit_song(folder: Path, metre: tuple[int, int]) -> Song:
-    beats, bar_starts = read_beats(folder)
-    gaps = [b - a for a, b in zip(bar_starts, bar_starts[1:])]
-    song = Song(folder.name, metre, sum(g == 4 for g in gaps) / len(gaps) if gaps else 0.0)
-    song.keys = read_keys(folder)
-    song.tempo_bpm = 60 / float(np.median(np.diff(beats)))
-    song.n_bars = len(beats) / 4
-    raw = read_melody(folder / f"{folder.name}.mid")
-    if not raw:
-        song.excluded_by = "no melody"
-        return song
-    song.n_raw = len(raw)
-    song.p16_onsets = sum(off_grid(on, beats) <= TOL_S for on, *_ in raw) / len(raw)
-    song.p16_ends = sum(off_grid(end, beats) <= TOL_S for _, end, *_ in raw) / len(raw)
-    song.p_combined = sum(off_grid(on, beats, triplets=True) <= TOL_S for on, *_ in raw) / len(raw)
-
-    # rule 12: notes starting within 20 ms of each other -> keep the highest
-    kept: list[list] = []
-    for on, end, pitch, vel in raw:
-        if kept and on - kept[-1][0] <= TOL_S:
-            song.simultaneous += 1
-            if pitch > kept[-1][2]:
-                kept[-1] = [on, end, pitch, vel]
-            continue
-        kept.append([on, end, pitch, vel])
-    # rule 12: overlaps, then cut each note at the next onset
-    for cur, nxt in zip(kept, kept[1:]):
-        if cur[1] > nxt[0]:
-            song.overlapping += 1
-            song.overlap_ms.append((cur[1] - nxt[0]) * 1000)
-            cur[1] = nxt[0]
-
-    # quantise to sixteenths; notes landing on the same sixteenth keep the highest pitch
-    quantised: list[list] = []
-    for on, end, pitch, vel in kept:
-        q_on, q_end = round(grid_position(on, beats)[0]), round(grid_position(end, beats)[0])
-        if quantised and quantised[-1][1] == q_on:
-            song.collisions += 1
-            if pitch > quantised[-1][3]:
-                quantised[-1] = [on, q_on, q_end, pitch, vel]
-            continue
-        quantised.append([on, q_on, q_end, pitch, vel])
-    # notes shorter than half a sixteenth are kept with length one sixteenth (implementation note 1)
-    for n in quantised:
-        if n[2] <= n[1]:
-            song.lengthened += 1
-            n[2] = n[1] + 1
-    for cur, nxt in zip(quantised, quantised[1:]):
-        cur[2] = min(cur[2], nxt[1])
-    song.notes = [tuple(n) for n in quantised]
-    song.gaps16 = [grid_position(nxt[0], beats)[0] - grid_position(cur[1], beats)[0] for cur, nxt in zip(kept, kept[1:])]
-    return song
 
 
 # --- statistics ------------------------------------------------------------

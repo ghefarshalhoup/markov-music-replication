@@ -28,7 +28,7 @@ sys.setrecursionlimit(10_000)
 
 
 def sample_constrained(model, total: int, length_of, limit, rng: random.Random,
-                       final: bool = True) -> tuple[list, list] | None:
+                       final: bool = True, memo: dict | None = None) -> tuple[list, list] | None:
     """Sample symbols whose lengths add up to exactly `total`.
 
     This is the paper's "duration left" construction: the state is extended with
@@ -38,9 +38,11 @@ def sample_constrained(model, total: int, length_of, limit, rng: random.Random,
     from the model conditioned on the constraint.
 
     length_of(symbol) -> its length; limit(t) -> latest time a symbol starting at t may end.
+    memo can be shared between calls with the same model, length_of, limit and final, when
+    what is allowed depends only on the time left. It saves recomputing beta for every piece.
     Returns (symbols, states they were sampled from) or None if no valid sequence exists.
     """
-    memo: dict = {}
+    memo = {} if memo is None else memo
 
     def options(state, t):
         lim = limit(t)
@@ -49,7 +51,7 @@ def sample_constrained(model, total: int, length_of, limit, rng: random.Random,
                 yield sym, p, model.next_state(state, sym), t + length_of(sym)
 
     def beta(state, t) -> float:
-        key = (state, t)
+        key = (state, total - t)
         if key not in memo:
             if t == total:
                 memo[key] = model.dist(state).get(END, 0.0) if final else 1.0
