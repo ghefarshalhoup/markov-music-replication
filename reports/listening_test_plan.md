@@ -1,6 +1,6 @@
 # Listening test plan (RQ4)
 
-Draft, 2026-11-17. Nothing has been run yet.
+Draft, 2026-11-17. Steps 1 and 2 (clips and audio) are built, nobody has listened yet. See section 6 for what changed while building.
 
 This test is the last comparison the brief asks for: "musical evaluation (listening tests)".
 
@@ -44,7 +44,7 @@ So the only difference between conditions is the notes themselves.
 
 1. **Who listens.** 20–30 people, for example classmates, friends and family. No musical training needed.
 2. **Before starting.** One question about musical experience (none / some / trained), and a consent line. Nothing else is recorded: the test is anonymous.
-3. **What each person hears.** 15 clips, 5 from each condition, drawn at random from the 30. They play in random order and are labelled only "Clip 1–15". It takes about 10 minutes.
+3. **What each person hears.** 15 clips, 5 from each condition: **group 1** hears clips 1–5 of each condition, **group 2** clips 6–10. The groups alternate from person to person, so every clip is heard by half the listeners. The clips play in random order and are labelled only "Clip 1–15". It takes about 10 minutes.
 4. **The three questions** asked after each clip:
    - *How much do you like this melody?* (1 = not at all, 5 = very much)
    - *Does the ending sound finished?* (1 = cut off, 5 = clearly finished)
@@ -75,7 +75,52 @@ So the only difference between conditions is the notes themselves.
    - a small web page that plays the clips in random order and stores the answers (more control over randomisation).
 4. **Analysis script.** It reads the answers and writes `results/listening/summary.md`.
 
-## 6. Limits to state in the report
+## 6. Built so far (2026-11-17)
+
+`scripts/make_listening_clips.py` makes all the clips. The details are in `results/listening/stimuli.md`.
+
+- **Generated clips:**
+  - The first 10 evaluation pieces of the baseline and of the MDP are now saved by `scripts/run_mdp.py` (`results/mdp/listening_pieces.json`).
+  - Re-running it reproduced every earlier result exactly.
+- **Real clips:** one excerpt per test song, drawn at random from that song's phrase-end excerpts (1 to 4 per song).
+- **Audio:**
+  - MuseScore 4's piano renders each clip (it follows the loudness of each note).
+  - ffmpeg cuts each clip one second after bar 8 and brings every clip to −23 LUFS with one fixed gain. A fixed gain keeps the accents inside a clip.
+  - Output: 33 MP3s of about 22 seconds each.
+- **Answer key:**
+  - The files have random names, listed in `listening_test/clips.json` by group only.
+  - Which name is which condition is in `results/listening/clip_key.json`, which the page never reads.
+- **Extra clips:**
+  - a practice clip (a training-song excerpt, not counted);
+  - the two attention checks.
+- **The chosen clips represent their conditions:**
+
+  | Measure | Real | Baseline | MDP |
+  |---|---|---|---|
+  | End on C | 80% | 30% | 90% |
+  | End long | 70% | 0% | 70% |
+
+  For comparison, all 200 pieces give: baseline 18% and 4%; MDP 82% and 76%.
+
+**The test app** (`listening_test/`, run instructions in `listening_test/README.md`):
+- **Built with** React, Vite, Animate.css and mo.js, served by `listening_test/serve.py`, which stores the answers in SQLite (`results/listening/listening.sqlite`).
+- **Flow:** researcher setup, consent, musical experience, sound check, 17 clips (15 plus 2 attention checks, order drawn once per person and stored), thank-you screen, then a researcher dashboard (Ctrl+Shift+L) with CSV exports.
+- **Names:** optional, kept in `names.sqlite`, never in the answers.
+- **Tested on 2026-11-17 with a scratch database:**
+  - two full sessions;
+  - a refresh mid-session (same order, no answers lost);
+  - the server stopped mid-session (the answer waited in the browser and arrived later);
+  - retries stored once; out-of-range answers refused;
+  - a participant declining;
+  - phone width.
+- **Wording:** the questions use the wording of section 3.
+
+**Changes from the draft above:**
+1. **Fixed groups instead of 15 random clips per person.** This balances the conditions within each person and makes the test simpler to run.
+2. **One real clip per test song** instead of 10 drawn from all excerpts. This way no song is heard twice.
+3. **Song 155 has no rests at all.** Its only phrase end is its final note, which runs past the last bar line in the beat file. The bar grid is continued in whole bars past that point, so the final note counts.
+
+## 7. Limits to state in the report
 
 - The listeners are a convenience sample, not experts.
 - The piano sound and held notes make every clip sound somewhat mechanical. This is the same for all conditions, but it may lower all ratings.

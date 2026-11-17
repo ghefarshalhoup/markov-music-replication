@@ -295,7 +295,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 4.3
+   "seconds": 6.2
   },
   "MDP main (practised)": {
    "success_rate": 1.0,
@@ -427,7 +427,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 2.3
+   "seconds": 3.7
   },
   "MDP main (exact)": {
    "success_rate": 1.0,
@@ -559,7 +559,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 3.9
+   "seconds": 5.6
   },
   "MDP 0.5x": {
    "success_rate": 1.0,
@@ -691,7 +691,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 4.2
+   "seconds": 4.9
   },
   "MDP 2x": {
    "success_rate": 1.0,
@@ -823,7 +823,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 4.0
+   "seconds": 4.2
   },
   "MDP 4x": {
    "success_rate": 1.0,
@@ -955,7 +955,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 4.0
+   "seconds": 4.3
   },
   "MDP without long ending": {
    "success_rate": 1.0,
@@ -1087,7 +1087,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 4.3
+   "seconds": 4.8
   },
   "MDP without ending on C": {
    "success_rate": 1.0,
@@ -1219,7 +1219,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 4.2
+   "seconds": 5.8
   },
   "MDP without strong beats": {
    "success_rate": 1.0,
@@ -1351,7 +1351,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 4.1
+   "seconds": 6.1
   },
   "no leash": {
    "success_rate": 1.0,
@@ -1483,7 +1483,7 @@
     },
     "choices the baseline rules out": {}
    },
-   "seconds": 1.5
+   "seconds": 2.2
   },
   "baseline, rhythm memory 2 (added after the baseline)": {
    "success_rate": 1.0,
@@ -1608,8 +1608,8 @@
     "pair_overlap loudness": 0.0006971466094617019
    },
    "policy": null,
-   "seconds": 2.1
+   "seconds": 3.2
   }
  },
- "seconds": 106.6
+ "seconds": 140.5
 }

@@ -1,0 +1,629 @@
+{
+ "8de66c": {
+  "condition": "real",
+  "source": {
+   "song": "312",
+   "bars": [
+    82,
+    89
+   ]
+  },
+  "notes": 48,
+  "sixteenths": 128,
+  "index": 1,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -22.7,
+   "gain (dB)": -0.3,
+   "peak (dBFS)": -11.9
+  }
+ },
+ "7c53f8": {
+  "condition": "real",
+  "source": {
+   "song": "796",
+   "bars": [
+    61,
+    68
+   ]
+  },
+  "notes": 29,
+  "sixteenths": 128,
+  "index": 2,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.3,
+   "gain (dB)": 0.3,
+   "peak (dBFS)": -10.2
+  }
+ },
+ "68e7de": {
+  "condition": "real",
+  "source": {
+   "song": "340",
+   "bars": [
+    57,
+    64
+   ]
+  },
+  "notes": 40,
+  "sixteenths": 128,
+  "index": 3,
+  "group": 1,
+  "ends on C": false,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -26.2,
+   "gain (dB)": 3.2,
+   "peak (dBFS)": -10.2
+  }
+ },
+ "002469": {
+  "condition": "real",
+  "source": {
+   "song": "046",
+   "bars": [
+    103,
+    110
+   ]
+  },
+  "notes": 25,
+  "sixteenths": 124,
+  "index": 4,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 21.67,
+   "loudness before (LUFS)": -22.9,
+   "gain (dB)": -0.1,
+   "peak (dBFS)": -10.6
+  }
+ },
+ "50c1d6": {
+  "condition": "real",
+  "source": {
+   "song": "155",
+   "bars": [
+    54,
+    61
+   ]
+  },
+  "notes": 43,
+  "sixteenths": 128,
+  "index": 5,
+  "group": 1,
+  "ends on C": false,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.1,
+   "gain (dB)": 0.1,
+   "peak (dBFS)": -9.8
+  }
+ },
+ "28640e": {
+  "condition": "real",
+  "source": {
+   "song": "339",
+   "bars": [
+    33,
+    40
+   ]
+  },
+  "notes": 45,
+  "sixteenths": 128,
+  "index": 6,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -22.8,
+   "gain (dB)": -0.2,
+   "peak (dBFS)": -12.4
+  }
+ },
+ "12644c": {
+  "condition": "real",
+  "source": {
+   "song": "743",
+   "bars": [
+    38,
+    45
+   ]
+  },
+  "notes": 69,
+  "sixteenths": 128,
+  "index": 7,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -21.3,
+   "gain (dB)": -1.7,
+   "peak (dBFS)": -10.0
+  }
+ },
+ "18e098": {
+  "condition": "real",
+  "source": {
+   "song": "612",
+   "bars": [
+    56,
+    63
+   ]
+  },
+  "notes": 67,
+  "sixteenths": 128,
+  "index": 8,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -22.1,
+   "gain (dB)": -0.9,
+   "peak (dBFS)": -11.2
+  }
+ },
+ "dd1c84": {
+  "condition": "real",
+  "source": {
+   "song": "628",
+   "bars": [
+    96,
+    103
+   ]
+  },
+  "notes": 28,
+  "sixteenths": 128,
+  "index": 9,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -25.3,
+   "gain (dB)": 2.3,
+   "peak (dBFS)": -9.8
+  }
+ },
+ "9a9c7f": {
+  "condition": "real",
+  "source": {
+   "song": "218",
+   "bars": [
+    81,
+    88
+   ]
+  },
+  "notes": 42,
+  "sixteenths": 128,
+  "index": 10,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.5,
+   "gain (dB)": 0.5,
+   "peak (dBFS)": -11.0
+  }
+ },
+ "fe4358": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 1
+  },
+  "notes": 44,
+  "sixteenths": 128,
+  "index": 1,
+  "group": 1,
+  "ends on C": false,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.2,
+   "gain (dB)": 0.2,
+   "peak (dBFS)": -9.8
+  }
+ },
+ "8525c4": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 2
+  },
+  "notes": 52,
+  "sixteenths": 128,
+  "index": 2,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.0,
+   "gain (dB)": 0.0,
+   "peak (dBFS)": -10.4
+  }
+ },
+ "c9ea95": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 3
+  },
+  "notes": 45,
+  "sixteenths": 128,
+  "index": 3,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.6,
+   "gain (dB)": 0.6,
+   "peak (dBFS)": -10.8
+  }
+ },
+ "cbf95b": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 4
+  },
+  "notes": 44,
+  "sixteenths": 128,
+  "index": 4,
+  "group": 1,
+  "ends on C": false,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.3,
+   "gain (dB)": 1.3,
+   "peak (dBFS)": -9.7
+  }
+ },
+ "6c8895": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 5
+  },
+  "notes": 58,
+  "sixteenths": 128,
+  "index": 5,
+  "group": 1,
+  "ends on C": false,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -22.8,
+   "gain (dB)": -0.2,
+   "peak (dBFS)": -10.6
+  }
+ },
+ "cf58c8": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 6
+  },
+  "notes": 53,
+  "sixteenths": 128,
+  "index": 6,
+  "group": 2,
+  "ends on C": false,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.6,
+   "gain (dB)": 0.6,
+   "peak (dBFS)": -9.1
+  }
+ },
+ "5919de": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 7
+  },
+  "notes": 41,
+  "sixteenths": 128,
+  "index": 7,
+  "group": 2,
+  "ends on C": false,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.2,
+   "gain (dB)": 1.2,
+   "peak (dBFS)": -9.7
+  }
+ },
+ "207fa9": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 8
+  },
+  "notes": 41,
+  "sixteenths": 128,
+  "index": 8,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.9,
+   "gain (dB)": 0.9,
+   "peak (dBFS)": -10.1
+  }
+ },
+ "a81604": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 9
+  },
+  "notes": 56,
+  "sixteenths": 128,
+  "index": 9,
+  "group": 2,
+  "ends on C": false,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.1,
+   "gain (dB)": 1.1,
+   "peak (dBFS)": -9.8
+  }
+ },
+ "9415d7": {
+  "condition": "baseline",
+  "source": {
+   "evaluation piece": 10
+  },
+  "notes": 48,
+  "sixteenths": 128,
+  "index": 10,
+  "group": 2,
+  "ends on C": false,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -22.8,
+   "gain (dB)": -0.2,
+   "peak (dBFS)": -8.8
+  }
+ },
+ "40d1c5": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 1
+  },
+  "notes": 51,
+  "sixteenths": 128,
+  "index": 1,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.4,
+   "gain (dB)": 0.4,
+   "peak (dBFS)": -10.5
+  }
+ },
+ "93f455": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 2
+  },
+  "notes": 46,
+  "sixteenths": 128,
+  "index": 2,
+  "group": 1,
+  "ends on C": false,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.0,
+   "gain (dB)": 1.0,
+   "peak (dBFS)": -8.9
+  }
+ },
+ "cb6142": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 3
+  },
+  "notes": 52,
+  "sixteenths": 128,
+  "index": 3,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.6,
+   "gain (dB)": 1.6,
+   "peak (dBFS)": -9.4
+  }
+ },
+ "823ac4": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 4
+  },
+  "notes": 52,
+  "sixteenths": 128,
+  "index": 4,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -22.8,
+   "gain (dB)": -0.2,
+   "peak (dBFS)": -10.6
+  }
+ },
+ "7de4b6": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 5
+  },
+  "notes": 55,
+  "sixteenths": 128,
+  "index": 5,
+  "group": 1,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.4,
+   "gain (dB)": 0.4,
+   "peak (dBFS)": -10.2
+  }
+ },
+ "6245ce": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 6
+  },
+  "notes": 48,
+  "sixteenths": 128,
+  "index": 6,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.7,
+   "gain (dB)": 0.7,
+   "peak (dBFS)": -10.2
+  }
+ },
+ "eeb42a": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 7
+  },
+  "notes": 38,
+  "sixteenths": 128,
+  "index": 7,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.7,
+   "gain (dB)": 1.7,
+   "peak (dBFS)": -9.7
+  }
+ },
+ "e16948": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 8
+  },
+  "notes": 43,
+  "sixteenths": 128,
+  "index": 8,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.2,
+   "gain (dB)": 1.2,
+   "peak (dBFS)": -9.8
+  }
+ },
+ "9c2dc4": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 9
+  },
+  "notes": 44,
+  "sixteenths": 128,
+  "index": 9,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": true,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.4,
+   "gain (dB)": 0.4,
+   "peak (dBFS)": -10.0
+  }
+ },
+ "2883c8": {
+  "condition": "MDP",
+  "source": {
+   "evaluation piece": 10
+  },
+  "notes": 43,
+  "sixteenths": 128,
+  "index": 10,
+  "group": 2,
+  "ends on C": true,
+  "ends on a long note": false,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -25.0,
+   "gain (dB)": 2.0,
+   "peak (dBFS)": -7.2
+  }
+ },
+ "d2eba5": {
+  "condition": "practice",
+  "source": {
+   "song": "639",
+   "bars": [
+    104,
+    111
+   ],
+   "note": "a training song; not part of the comparison"
+  },
+  "notes": 41,
+  "sixteenths": 128,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -24.1,
+   "gain (dB)": 1.1,
+   "peak (dBFS)": -10.8
+  }
+ },
+ "255860": {
+  "condition": "attention",
+  "source": {
+   "clip": "repeated note"
+  },
+  "notes": 32,
+  "sixteenths": 128,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -23.7,
+   "gain (dB)": 0.7,
+   "peak (dBFS)": -12.6
+  }
+ },
+ "77f3af": {
+  "condition": "attention",
+  "source": {
+   "clip": "C major scale"
+  },
+  "notes": 29,
+  "sixteenths": 128,
+  "audio": {
+   "seconds": 22.33,
+   "loudness before (LUFS)": -26.2,
+   "gain (dB)": 3.2,
+   "peak (dBFS)": -9.9
+  }
+ }
+}

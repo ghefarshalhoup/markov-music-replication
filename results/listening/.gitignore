@@ -1,0 +1,5 @@
+# participant data stays on the laptop
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+trials_log.jsonl

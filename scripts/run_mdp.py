@@ -47,6 +47,8 @@ ATTEMPTS = 200
 STOP, CHECK, MAX = 0.01, 10_000, 300_000        # practice stop rule, as in practise_agents.py
 NO_LEASH_PIECES = 30_000                       # the main version's largest practice budget
 EXPORT = {"MDP main (practised)": 5, "MDP 4x": 3, "no leash": 3, "baseline": 3}
+LISTEN = ("baseline", "MDP main (practised)")   # their first 10 pieces are the listening-test clips
+LISTEN_PIECES = 10
 
 
 def rests_between_notes(m: Melody) -> int:
@@ -189,7 +191,7 @@ def main() -> None:
                  "copying": copying(test_windows, indexes), "diversity": diversity(test_windows, rng),
                  "n_test_windows": len(test_windows)}
 
-    runs, examples = {}, {}
+    runs, examples, listening = {}, {}, {}
     for name, (agents, ms, tps) in conditions.items():
         t0 = time.time()
         rng = random.Random(seed_for("generate", name))
@@ -206,6 +208,9 @@ def main() -> None:
                       "policy": policy_bits(done, agents, baselines, ms) if ms is models else None,
                       "seconds": round(time.time() - t0, 1)}
         examples[name] = done[:EXPORT.get(name, 0)]
+        if name in LISTEN:
+            listening[name] = [{"tokens": p.tokens, "pitches": p.pitches, "levels": p.levels}
+                               for p in done[:LISTEN_PIECES]]
         print(f"{name:55s} {runs[name]['seconds']}s", flush=True)
 
     folder = OUT / "examples"
@@ -214,7 +219,12 @@ def main() -> None:
             continue
         stem = {"MDP main (practised)": "mdp", "MDP 4x": "mdp_4x", "no leash": "no_leash", "baseline": "baseline"}[name]
         for i, piece in enumerate(pieces, 1):
-            write_midi(folder / f"{stem}_{i}.mid", piece.tempo, {"Melody": to_events(piece, vocabulary)})
+            try:
+                write_midi(folder / f"{stem}_{i}.mid", piece.tempo, {"Melody": to_events(piece, vocabulary)})
+            except PermissionError:                # the file is open in a player; keep the old copy
+                print(f"could not overwrite {stem}_{i}.mid (file in use)", flush=True)
+
+    (OUT / "listening_pieces.json").write_text(json.dumps(listening), encoding="utf-8")
 
     result = {"strengths": strength, "practice pieces used (main)": budget, "no-leash practice pieces": NO_LEASH_PIECES,
               "attempts": ATTEMPTS, "reference": reference, "runs": runs, "seconds": round(time.time() - started, 1)}
